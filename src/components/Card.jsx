@@ -8,19 +8,19 @@ function Card({product,addList}) {
     const newData=product.specialId
     addList(newData)
     }
-    const pType=product.productType
-    const smallString=product.skuId
-    const sub=smallString.substring(0, 5)
+    
+    const pType=product.productTypeId
+    
     
   return (
     
 
         
         <div className='card'>
-            <input type="checkbox" onClick={handleClick} className="delete-checkbox" ID="delete-checkbox" />
+            <input type="checkbox" onClick={handleClick} className="delete-checkbox"  />
             
             
-            <div>SKU:{sub}</div>
+            <div>SKU:{product.skuId}</div>
             <div>{product.name}</div>
             <div>{product.price} $</div>
             {/* <div>{product.productType}</div> */}
